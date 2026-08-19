@@ -4,7 +4,9 @@
 
 struct novprodut
 {
-    char nome[100];
     int id;
+    char nome[100];
     float preco;
-};
+    int quantidade;
+}addproduto;
+
