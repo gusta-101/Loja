@@ -6,7 +6,7 @@ int main() {
     int capacidade = 0;
     int id = 1;
 
-    addproduto *armazenamento = NULL;
+    produto *armazenamento = NULL;
         printf("-----------------------------------\n");
         printf("Bem vindo ao catalogo Dream Market!\n");
         printf("-----------------------------------\n\n");
@@ -26,7 +26,7 @@ int main() {
             case 1: {
                 if (total == capacidade) {
                     int novacap = (capacidade == 0) ? 2 : capacidade * 2;
-                    addproduto *temp = realloc(armazenamento, novacap * sizeof(addproduto));
+                    produto *temp = realloc(armazenamento, novacap * sizeof(produto));
 
                     if (temp == NULL) {
                         printf("Erro: Falha na alocacao de memoria!\n");

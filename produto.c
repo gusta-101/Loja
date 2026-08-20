@@ -5,8 +5,8 @@ void limpar_buffer(void) {
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
-addproduto adcionar_produto(int id) {
-    addproduto add;
+produto adcionar_produto(int id) {
+    produto add;
     add.id = id;
 
     printf("\nId inserido automaticamente: %d\n", add.id);

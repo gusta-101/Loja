@@ -20,6 +20,12 @@ typedef struct {
     int capacidade_maxima;  /* Capacidade atual alocada na memória para o vetor [3] */
 } Estoque;
 
+typedef struct{
+    float quantidadetotal;
+}estoquetotal;
+
+produto adcionar_produto(int id);
+
 void exibir_produto (produto p);
 
 int inicializarEstoque(Estoque *estoque, int capacidade_inicial);
