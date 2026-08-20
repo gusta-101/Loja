@@ -4,13 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
+<<<<<<< HEAD
 typedef struct produto
+=======
+typedef struct
+>>>>>>> 64bde01d2253e315eb4241e22e1d31125c35e880
 {
-    char nome[100];
     int id;
+    char nome[100];
     float preco;
     int quantidade;
+<<<<<<< HEAD
 } produto;
 
 typedef struct {
@@ -45,3 +51,12 @@ float calcular_total_recursivo(Estoque *estoque, int indice);
 void liberar_estoque(Estoque *estoque);
 
 #endif  
+=======
+}addproduto;
+
+typedef struct{
+    float quantidadetotal;
+}estoquetotal;
+
+addproduto adcionar_produto(int id);
+>>>>>>> 64bde01d2253e315eb4241e22e1d31125c35e880
