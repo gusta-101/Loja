@@ -4,12 +4,12 @@ void limpar_buffer(void) {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
-
-addproduto adcionar_produto(int id) {
-    addproduto add;
+//addproduto
+produto adcionar_produto(int id) {
+    produto add;
     add.id = id;
 
-    printf("\nId inserido automaticamente: %d\n", add.id);
+    
 
     printf("Nome do produto: ");
     limpar_buffer();
@@ -23,6 +23,34 @@ addproduto adcionar_produto(int id) {
     printf("Quantidade atual: ");
     scanf("%d", &add.quantidade);
 
-    printf("\n>> Produto adicionado com sucesso!\n");
+    printf("\nId do produto: %d\n", add.id);
+    
+    printf("\n===============================\nProduto adicionado com sucesso!\n===============================\n");
     return add;
+}
+
+//rmvporId(armazenamento, &total, IdASerRemovido);
+void rmvporId(produto *produtos, int *total, int IdASerRemovido) {
+        if(*total==0){
+        printf("\nO estoque esta vazio!!\n");
+        return;
+    }
+
+    for(int i=0;i<*total;i++){
+    if(produtos[i].id==IdASerRemovido){
+        for(int j=i;j<*total-1;j++){
+            produtos[j]=produtos[j+1];
+            }        
+            printf("\-------------------------------\nProduto Removido com sucesso!\n-------------------------------\n");
+                     
+            (*total)--;
+        return;
+    }
+        printf("\nProduto não encontrado.\nCancelando a operacao... \n");
+        return;
+
+    }
+    
+    
+    
 }
