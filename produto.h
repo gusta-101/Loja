@@ -3,16 +3,13 @@
 #include <stdbool.h>
 #include <string.h>
 
-typedef struct
-{
+
+typedef struct {
     int id;
-    char nome[100];
+    char nome[50];
     float preco;
     int quantidade;
-}addproduto;
+} produto;
 
-typedef struct{
-    float quantidadetotal;
-}estoquetotal;
 
-addproduto adcionar_produto(int id);
+void rmvporId(produto *produtos, int *total, int IdASerRemovido);
