@@ -3,3 +3,4 @@ output/
 *.exe
 main
 produto
+.agents
