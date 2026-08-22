@@ -11,5 +11,5 @@ typedef struct {
     int quantidade;
 } produto;
 
-produto adcionar_produto(int id);
+
 void rmvporId(produto *produtos, int *total, int IdASerRemovido);
