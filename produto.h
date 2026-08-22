@@ -6,10 +6,10 @@
 #include <stdbool.h>
 #include <string.h>
 
-typedef struct
-{
+
+typedef struct {
     int id;
-    char nome[100];
+    char nome[50];
     float preco;
     int quantidade;
 } produto;
@@ -52,3 +52,5 @@ float calcular_total_recursivo(Estoque *estoque, int indice);
 void liberar_estoque(Estoque *estoque);
 
 #endif  
+
+void rmvporId(produto *produtos, int *total, int IdASerRemovido);

@@ -2,9 +2,7 @@ Trabalho feito pelos alunos:
 ============================
 
 Murilo Alves Botelho
-
-Gustavo Nogueira
-
+Gustavo Nogueira 
 Isaac Ferreira Santos
 
 

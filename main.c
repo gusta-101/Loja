@@ -7,12 +7,10 @@ int main() {
     int id = 1;
 
     produto *armazenamento = NULL;
-        printf("-----------------------------------\n");
-        printf("Bem vindo ao catalogo Dream Market!\n");
-        printf("-----------------------------------\n\n");
-    while (user != 7) {
+        printf("---------------------------------------------\nBem vindo ao controle de estoque Dream Market!\n----------------------------------------------\n\n");
+    do {
         
-        printf("Escolha a opcao que voce quer fazer:\nDigite...\n");
+        printf("Digite...\n");
         printf("1 - Cadastrar produto \n");
         printf("2 - Remover produto por id \n");
         printf("3 - Listar todos os produtos \n");
@@ -20,6 +18,7 @@ int main() {
         printf("5 - Ordenar produtos por preco \n");
         printf("6 - Calcular o valor total do estoque \n");
         printf("7 - Encerrar o programa \n");
+        printf(">>> ");
         scanf("%d", &user);
 
         switch (user) {
@@ -31,23 +30,26 @@ int main() {
                     if (temp == NULL) {
                         printf("Erro: Falha na alocacao de memoria!\n");
                         return 1;
-                        break;
+                        
                     }
 
                     armazenamento = temp;
                     capacidade = novacap;
                 }
-
                 armazenamento[total] = adcionar_produto(id);
                 total++;
                 id++;
                 break;
             }
 
-            case 2:
-                /* code */
+            case 2:{
+                
+                int IdASerRemovido;
+                printf("\nInsira o ID do produto a ser removido: ");
+                scanf("%d", &IdASerRemovido);
+                rmvporId(armazenamento, &total, IdASerRemovido);
                 break;
-
+                }
             case 3:
                 /* code */
                 break;
@@ -76,7 +78,8 @@ int main() {
                 printf("Comando invalido!! \nPor favor, tente novamente\n");
                 break;
         }
-    }
+    }while (user != 7);
 
+    
     return 0;
 }
